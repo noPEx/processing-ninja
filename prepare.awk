@@ -13,13 +13,16 @@ BEGIN{ FS="\\";devId1=0;devId2=0;phase_in_1=0;phase_in_2=0;is_genuine=5;user_id1
 	 score_lum = array[1] ;
 	 score_sec = array[2] ;
 
-	 //print "$4 is : ",$4 ;
-	 //print "$9 is : ",$9 ;
+	 #print "$4 is : ",$4 ;
+	 #print "$9 is : ",$9 ;
+	 #print "$3 is : "$3 ;
+	 #print "$8 is : "$8 ;
 	if( $3=="Phase1" && $8=="Phase2" ) {
 	 #print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_lum > "tada_lum.txt" ;
 
 	 #print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_sec > "tada_sec.txt" ;
 		if( $4 == "Fut" && $9 == "Fut" ) {
+			#print "FUT FUT" ;
 			print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_lum  >> "FF_standard_lum.txt" ;
 			print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_sec		>> "FF_standard_sec.txt" ;
 
@@ -29,6 +32,7 @@ BEGIN{ FS="\\";devId1=0;devId2=0;phase_in_1=0;phase_in_2=0;is_genuine=5;user_id1
 				print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_sec	>> "FL_standard_sec.txt" ;
 		}
 		if( $4 == "Fut" && $9 == "Sec" ) {
+				#print "FUT SEC HERE" ;
 				print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_lum	>> "FS_standard_lum.txt" ;
 				print user_id1" "phase_in_1""devId1" "user_id2" "phase_in_2""devId2" "is_genuine" "score_sec	>> "FS_standard_sec.txt" ;
 
